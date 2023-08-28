@@ -59,3 +59,74 @@ body{
    padding-top: 10px;
    margin-left: -75px;
 }
+
+/* dashboard css */
+
+  
+#sidebar {
+    background-color: #333;
+    color: white;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+  }
+  #sidebar a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  #content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 10px;
+  }
+  
+  li:hover {
+    background-color: #555;
+  }
+  
+  .active {
+    background-color: #555;
+  }
+  
+  h1 {
+    margin-top: 0;
+  }
+
+  /* event page */
+  form {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
