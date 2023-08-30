@@ -10,8 +10,8 @@
 </head>
 <body>
 <div id="sidebar">
-    <h1>Admin Dashboard</h1>
-    <ul>
+  <h1 class="header-title">EventApp</h1>
+  <ul>
         <a href="dashboard.html"><li class="active">Dashboard</li></a>
         <a href="event.html"><li>Events</li></a>
         <a href="budget.html"><li>Budget</li></a>

@@ -12,33 +12,33 @@
         <h1>Please Register first!</h1>
         <hr>
         <div class="register-body">
-           <form action="" method="post">
+           <form action="registration_post.php" method="post">
                 <div class="form-group">
                     <label for="FirstName">FirstName</label>
-                    <input placeholder="Enter your firstname" class="form-input" type="text">
+                    <input placeholder="Enter your firstname" name="firstname" class="form-input" type="text">
                 </div>
                 <div class="form-group">
                     <label for="LastName">LastName</label>
-                    <input placeholder="Enter your Lastname"  class="form-input" type="text">
+                    <input placeholder="Enter your Lastname" name="lastname" class="form-input" type="text">
                 </div>
                 <div class="form-group">
                     <label for="Email">Email</label>
-                    <input placeholder="Enter your Email Address"  class="form-input" type="text">
+                    <input placeholder="Enter your Email Address" name="email_address"  class="form-input" type="text">
                 </div>
                 <div class="form-group">
                     <label for="PhoneNO">Phone NO.</label>
-                    <input placeholder="Enter your Phone number"  class="form-input" type="text">
+                    <input placeholder="Enter your Phone number" name="phone_no" class="form-input" type="text">
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input placeholder="Enter your Password"  class="form-input" type="text">
+                    <input placeholder="Enter your Password" name="password"  class="form-input" type="text">
                 </div>
                 <div class="form-group">
                     <label for="Confirm-Password">Confirm Password</label>
-                    <input placeholder="Re-type Password"  class="form-input" type="text">
+                    <input placeholder="Re-type Password" name="cpassword" class="form-input" type="text">
                 </div>
                 <div class="form-group">
-                    <button class="btn" type="button">Register</button>
+                    <button class="btn" type="submit">Register</button>
                 </div>
            </form> 
             <p>Already have an Account? please <a href="login.html">login</a> </p>

@@ -64,7 +64,7 @@ body{
 
   
 #sidebar {
-    background-color: #333;
+    background-color: rgb(42, 120, 165);
     color: white;
     width: 250px;
     height: 100vh;
@@ -102,7 +102,7 @@ body{
   }
 
   /* event page */
-  form {
+  .form-class form {
     padding: 20px;
     background-color: #f0f0f0;
     border-radius: 5px;
@@ -129,4 +129,46 @@ body{
     border-radius: 3px;
     cursor: pointer;
   }
-  
+
+.evt-view-btn{
+
+   float: right;
+   padding: 10px 20px;
+   background-color: #333;
+   color: white;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+   text-decoration: none;
+
+}
+.global-btn{
+   padding: 5px 10px;
+   background-color: #333;
+   color: white;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+   text-decoration: none;
+}
+.header-title{
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+}  
+/* event list style  */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

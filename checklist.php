@@ -10,7 +10,7 @@
 </head>
 <body>
 <div id="sidebar">
-    <h1>Admin Dashboard</h1>
+  <h1 class="header-title">EventApp</h1>
     <ul>
         <a href="dashboard.html"><li class="active">Dashboard</li></a>
         <a href="event.html"><li>Events</li></a>
@@ -22,18 +22,24 @@
     </ul>
   </div>
   <div id="content">
-    <h1>Budget</h1>
+    <h1>Checklist</h1>
     <form>
-      <label for="ItemName">Item Name</label>
-      <input type="text" id="ItemName" name="ItemName" required>
-      <label for="Itemcost">Item Cost</label>
-      <input type="number" id="Itemcost" name="ItemCost" required>
-      <label for="eventType">Description</label>
-      <textarea name="" id="" style="width: 100%;" rows="5"></textarea>
+      <label for="	ChecklistItem">	Check listItem</label>
+      <input type="text" id="ChecklistItem" name="ChecklistItem" required>
       
       
+      <label for="ChecklistItem">ChecklistItem</label>
+        <select id="ChecklistItem" name="ChecklistItem">
+            <option>Select Checklist Status...</option>
+            <option value="Active">Active</option>
+            <option value="Completed">Completed</option>
+            <option value="Cancelled">Cancelled</option>
+        </select>
      
-      <button type="submit">Add Budget</button>
+      <button type="submit">Add ChecklistItem</button>
+
+
+
     </form>
   </div>
 </body>

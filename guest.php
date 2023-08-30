@@ -10,8 +10,8 @@
 </head>
 <body>
 <div id="sidebar">
-    <h1>Admin Dashboard</h1>
-    <ul>
+  <h1 class="header-title">EventApp</h1>
+  <ul>
         <a href="dashboard.html"><li class="active">Dashboard</li></a>
         <a href="event.html"><li>Events</li></a>
         <a href="budget.html"><li>Budget</li></a>
@@ -22,24 +22,27 @@
     </ul>
   </div>
   <div id="content">
-    <h1>Checklist</h1>
+    <h1>Guest</h1>
     <form>
-      <label for="	ChecklistItem">	Check listItem</label>
-      <input type="text" id="ChecklistItem" name="ChecklistItem" required>
+      <label for="GuestName">Guest Name</label>
+      <input type="text" id="GuestName" name="GuestName" required>
       
+      <label for="GuestEmail">Guest Email</label>
+      <input type="email" id="GuestEmail" name="GuestEmail" required>
       
-      <label for="ChecklistItem">ChecklistItem</label>
-        <select id="ChecklistItem" name="ChecklistItem">
-            <option>Select Checklist Status...</option>
+      <label for="GuestPhone">Guest Phone</label>
+      <input type="phone" id="GuestPhone" name="GuestPhone" required>
+     
+      
+      <label for="GuestRSVPStatus">Guest RSVP Status</label>
+        <select id="GuestRSVPStatus	" name="GuestRSVPStatus	">
+            <option>Select	Guest RSVP Status...</option>
             <option value="Active">Active</option>
             <option value="Completed">Completed</option>
             <option value="Cancelled">Cancelled</option>
         </select>
-     
-      <button type="submit">Add ChecklistItem</button>
-
-
-
+      
+      <button type="submit">Add Event</button>
     </form>
   </div>
 </body>
