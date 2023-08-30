@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,6 +42,18 @@
                 <div class="form-group">
                     <label for="Confirm-Password">Confirm Password</label>
                     <input placeholder="Re-type Password" name="cpassword" class="form-input" type="text">
+                    <?php
+                       if(isset($_SESSION['pass_not_match'])){
+                    ?>
+
+                    <small style="color: red;"><?php echo "***". $_SESSION['pass_not_match']?></small>
+
+                      <?php
+
+                       }
+
+                       ?>
+                   
                 </div>
                 <div class="form-group">
                     <button class="btn" type="submit">Register</button>
@@ -47,3 +65,7 @@
     </div>
 </body>
 </html>
+
+<?php
+session_unset();
+?>

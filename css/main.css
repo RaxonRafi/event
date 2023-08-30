@@ -90,11 +90,11 @@ body{
   }
   
   li:hover {
-    background-color: #555;
+    background-color: #1753ae;
   }
   
   .active {
-    background-color: #555;
+    background-color: #0800ff;
   }
   
   h1 {
