@@ -9,21 +9,21 @@
 <body>
    
 <div class="wrapper">
-    <form action="" method="post">
+    <form action="login_post.php" method="post">
         <h1>LOGIN</h1>
         <p>Please Enter Email & Password for login</p>
         <hr>
         <div class="register-body">
             <div class="form-group">
                 <label for="E_mail">Email</label>
-                <input class="form-input" id="E_mail" placeholder="Enter your Email Address" type="text">
+                <input class="form-input" id="E_mail" name="email_address" placeholder="Enter your Email Address" type="text">
             </div> 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input class="form-input" id="password" placeholder="Enter your Password" type="password">
+                <input class="form-input" id="password" name="password" placeholder="Enter your Password" type="password">
             </div>
             <div  class="form-group">
-                <button class="btn">login</button>
+                <button type="submit" class="btn">login</button>
             </div>
             <p>Don't have an Account? please <a href="registration.html">Register</a> </p>
         </div>
