@@ -22,7 +22,7 @@ require_once "./config/sidebar.php"
      ?>
 
 
-    <a class="evt-view-btn" href="eventList.html">View Event List</a>
+    <a class="evt-view-btn" href="eventList.php">View Event List</a>
     <div class="form-class">
       <form action="event_post.php" method="post">
         <label for="eventName">Event Name</label>

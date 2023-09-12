@@ -1,10 +1,27 @@
 <?php
+session_start();
+require_once "./config/db.php";
+require_once "./config/sidebar.php";
+$eventListSql ="SELECT * FROM event";
+$eventLists = mysqli_query($conn,$eventListSql);
 
-require_once "./config/sidebar.php"
 ?>
     <div id="content">
       <h1>Event List page!</h1>
 
+    <?php
+     if(isset($_SESSION['message'])){
+    ?>
+
+     <div class="error_msg">
+
+       <?php echo $_SESSION['message'] ?>
+        
+     </div>
+
+     <?php
+      }
+     ?>
         </head>
         <body>
                 
@@ -18,65 +35,27 @@ require_once "./config/sidebar.php"
             <th>Status</th>
             <th>Action</th>
           </tr>
+          <?php
+            foreach($eventLists as $eventList){
+          ?>
           <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
+            <td><?php echo $eventList['EventName'] ?></td>
+            <td><?php echo $eventList['EventDate'] ?></td>
+            <td><?php echo $eventList['EventTime'] ?></td>
+            <td><?php echo $eventList['EventLocation'] ?></td>
+            <td><?php echo $eventList['EventDescription'] ?></td>
+            <td><?php echo $eventList['EventStatus'] ?></td>
             <td>
-                <a class="global-btn" href="">Edit</a>
-                <a class="global-btn" href="">Delete</a>
+                <a class="global-btn" href="eventEdit.php?EventID=<?php echo $eventList['EventID']?>">Edit</a>
+                <a class="global-btn" href="event_delete.php?EventID=<?php echo $eventList['EventID']?>">Delete</a>
             </td>
           </tr>
-          <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-          </tr>
-          <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-          </tr>
-          <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-          </tr>
-          <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-          </tr>
-          <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-          </tr>
+          <?php
+          }
+          ?>
         </table>
     </div>
 <?php
-require_once "./config/footer.php"
+require_once "./config/footer.php";
+session_unset();
 ?>

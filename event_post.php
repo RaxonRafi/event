@@ -28,6 +28,7 @@ if(isset($_POST['submit'])){
     if($result){
     
         $_SESSION['message'] = "Event Added Successfully!";
+        $_SESSION['EventID'] = $uniqueID;
         header("location:event.php");
     
     }else{
