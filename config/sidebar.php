@@ -17,7 +17,7 @@
         <a href="task.php"><li class="<?php echo isset($task) ? "active" : "" ?>">Task</li></a>
         <a href="checklist.php"><li class="<?php echo isset($checklist) ? "active" : "" ?>">Checklist</li></a>
         <a href="guest.php"><li class="<?php echo isset($guest) ? "active" : "" ?>">Guest</li></a>
-        <a href="event.php"><li>Logout</li></a>      
+        <a href="logout.php"><li>Logout</li></a>      
     </ul>
   </div>
 

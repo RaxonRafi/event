@@ -3,7 +3,7 @@ session_start();
 require_once "./config/db.php";
 require_once "./config/sidebar.php" ;
 $EventID = $_GET['EventID'];
-$select_Event_Sql = "SELECT * FROM event WHERE EventID = $EventID";
+$select_Event_Sql = "SELECT * FROM event WHERE EventID = '$EventID'";
 $data = mysqli_fetch_assoc(mysqli_query($conn,$select_Event_Sql)); 
 
 ?>
@@ -44,7 +44,7 @@ $data = mysqli_fetch_assoc(mysqli_query($conn,$select_Event_Sql));
               <option value="Cancelled"<?php if($data['EventStatus'] == "Cancelled"){ echo "selected";}?> >Cancelled</option>
           </select>
         
-        <button name="submit" type="submit">Add Event</button>
+        <button name="submit" type="submit">Update Event</button>
       </form>
     </div>
    

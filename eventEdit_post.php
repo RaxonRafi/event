@@ -9,7 +9,7 @@ $eventLocation = $_POST['eventLocation'];
 $description = $_POST['description'];
 $eventStatus = $_POST['eventStatus'];
 
-$update_event_sql = "UPDATE event SET EventName='$eventName',EventDate='$eventDate ',EventTime='$eventTime',EventLocation='$eventLocation',EventDescription='$description',EventStatus='$eventStatus' WHERE EventID = $EventID";
+$update_event_sql = "UPDATE event SET EventName= '$eventName',EventDate= '$eventDate ',EventTime='$eventTime',EventLocation='$eventLocation',EventDescription='$description',EventStatus='$eventStatus' WHERE EventID = '$EventID'";
 $result = mysqli_query($conn,$update_event_sql);
 if($result){
     
