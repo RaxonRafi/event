@@ -59,7 +59,7 @@ session_start();
                     <button class="btn" type="submit">Register</button>
                 </div>
            </form> 
-            <p>Already have an Account? please <a href="login.html">login</a> </p>
+            <p>Already have an Account? please <a href="login.php">login</a> </p>
     
         </div>
     </div>

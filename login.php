@@ -16,11 +16,11 @@
         <div class="register-body">
             <div class="form-group">
                 <label for="E_mail">Email</label>
-                <input class="form-input" id="E_mail" name="email_address" placeholder="Enter your Email Address" type="text">
+                <input class="form-input" autocomplete="off" id="E_mail" name="email_address" placeholder="Enter your Email Address" type="text">
             </div> 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input class="form-input" id="password" name="password" placeholder="Enter your Password" type="password">
+                <input class="form-input" autocomplete="off" id="password" name="password" placeholder="Enter your Password" type="password">
             </div>
             <div  class="form-group">
                 <button type="submit" class="btn">login</button>

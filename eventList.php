@@ -1,7 +1,6 @@
 <?php
-session_start();
-require_once "./config/db.php";
 require_once "./config/sidebar.php";
+require_once "./config/db.php";
 $eventListSql ="SELECT * FROM event";
 $eventLists = mysqli_query($conn,$eventListSql);
 
@@ -46,8 +45,9 @@ $eventLists = mysqli_query($conn,$eventListSql);
             <td><?php echo $eventList['EventDescription'] ?></td>
             <td><?php echo $eventList['EventStatus'] ?></td>
             <td>
+                <a class="global-btn" href="event_details.php?EventID=<?php echo $eventList['EventID']?>">view</a>
                 <a class="global-btn" href="eventEdit.php?EventID=<?php echo $eventList['EventID']?>">Edit</a>
-                <a class="global-btn" href="event_delete.php?EventID=<?php echo $eventList['EventID']?>">Delete</a>
+                <a class="global-btn" onClick ="return confirm('Are you sure you want to delete?')" href="event_delete.php?EventID=<?php echo $eventList['EventID']?>">Delete</a>
             </td>
           </tr>
           <?php
@@ -56,6 +56,6 @@ $eventLists = mysqli_query($conn,$eventListSql);
         </table>
     </div>
 <?php
+unset($_SESSION['message']);
 require_once "./config/footer.php";
-session_unset();
 ?>

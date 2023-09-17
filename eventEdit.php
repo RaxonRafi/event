@@ -1,5 +1,4 @@
 <?php 
-session_start();
 require_once "./config/db.php";
 require_once "./config/sidebar.php" ;
 $EventID = $_GET['EventID'];
@@ -51,5 +50,6 @@ $data = mysqli_fetch_assoc(mysqli_query($conn,$select_Event_Sql));
   </div>
   <?php
    require_once "./config/footer.php";
-   session_unset();
+   unset($_SESSION['message']);
+  //  session_unset($_SESSION['message']);
   ?>

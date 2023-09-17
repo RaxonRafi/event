@@ -1,7 +1,7 @@
 <?php 
-session_start();
 $event = true;
 require_once "./config/sidebar.php" 
+
 ?>
 
   <div id="content">
@@ -50,5 +50,5 @@ require_once "./config/sidebar.php"
   </div>
   <?php
    require_once "./config/footer.php";
-   session_unset();
+   unset($_SESSION['message']);
   ?>

@@ -2,7 +2,7 @@
 session_start();
 require_once "./config/db.php";
 $EventID = $_GET['EventID'];
-$event_delete_sql = "DELETE FROM event WHERE EventID = $EventID";
+$event_delete_sql = "DELETE FROM event WHERE EventID = '$EventID'";
 $result = mysqli_query($conn,$event_delete_sql);
 
 if($result){
