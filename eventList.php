@@ -23,8 +23,8 @@ $eventLists = mysqli_query($conn,$eventListSql);
      ?>
         </head>
         <body>
+      
         
-
           <a style="float: right;" class="global-btn" href="trash.php" type="buttom">Trash</a>
 
         <table>

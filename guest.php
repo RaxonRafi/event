@@ -21,7 +21,7 @@ $events =mysqli_query($conn,$event_id_sql);
       }
      ?>
     <form action="guest_post.php" method="post">
-    <label for="eventStatus">Event Name</label>
+    <label for="eventName">Event Name</label>
      <select name="EventID" id="">
 
      <option>--Select an Event--</option>
@@ -33,10 +33,14 @@ $events =mysqli_query($conn,$event_id_sql);
      <?php
       }
      ?>
+     </select>
       <label for="GuestName">Guest Name</label>
       <input type="text" id="GuestName" name="GuestName" required>
+
       <label for="GuestEmail">Guest Email</label>
       <input type="email" id="GuestEmail" name="GuestEmail" required>
+
+
       <label for="GuestPhone">Guest Phone</label>
       <input type="phone" id="GuestPhone" name="GuestPhone" required>
       <label for="GuestRSVPStatus">Guest RSVP Status</label>

@@ -2,7 +2,7 @@
 
 require_once "./config/db.php";
 $restore_event_id = $_GET['EventID'];
-$update_sql = "UPDATE backup SET deleted = 1 WHERE EventID = '$restore_event_id'";
+$update_sql = "UPDATE backup SET deleted = '0' WHERE EventID = '$restore_event_id'";
 $update_result = mysqli_query($conn,$update_sql);
 
 if($update_result){

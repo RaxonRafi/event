@@ -11,8 +11,6 @@ if(!isset($_SESSION['email_address'])){
 $total_event_sql="SELECT COUNT(*) AS total_event FROM event";
 $total_event_cnt=mysqli_fetch_assoc(mysqli_query($conn,$total_event_sql));
 
-print_r($total_event_cnt);
-// <?php echo $_SESSION['firstName']." ". $_SESSION['lastName'] ?>
 ?>
   <div id="content">
     <h1>Welcome, Admin </h1>

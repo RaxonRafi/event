@@ -59,21 +59,21 @@ nav ul li {
    list-style: none;
 
 }
-.event-list{
+/* .event-list{
     padding-left: 600px;
-}
-table {
+} */
+.event-list table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
   }
   
-  td, th {
-    border: 1px solid #dddddd;
+.event-list td, th {
+    border: 1px solid #000000;
     text-align: left;
     padding: 8px;
   }
   
-  tr:nth-child(even) {
+.event-list  tr {
     background-color: #dddddd;
   }
 .header-content{
@@ -117,8 +117,6 @@ footer {
     background-color: rgb(42, 120, 165);
     color: #fff;
     margin-top: 170px;
-    
-   
     padding: 1rem 0;
 }
 
@@ -126,4 +124,8 @@ body {
     background-image: url('../images/background.webp');
     background-size: cover; 
     background-repeat: no-repeat; 
+}
+.title a{
+    text-decoration: none;
+    color: black;
 }

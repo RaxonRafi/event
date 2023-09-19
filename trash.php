@@ -23,7 +23,7 @@ $eventLists = mysqli_query($conn,$eventListSql);
      ?>
         </head>
         <body>
-        
+        <a style="float: right;" class="global-btn" href="eventList.php" type="buttom">Event List</a>
 
         <table>
           <tr>
@@ -47,7 +47,7 @@ $eventLists = mysqli_query($conn,$eventListSql);
             <td><?php echo $eventList['EventStatus'] ?></td>
             <td>
                 <a class="global-btn" href="restore.php?EventID=<?php echo $eventList['EventID']?>">Restore</a>
-                <a class="global-btn" onClick ="return confirm('Are you sure you want to delete?')" href="event_delete.php?EventID=<?php echo $eventList['EventID']?>">Delete Permanently</a>
+                <a class="global-btn" onClick ="return confirm('Are you sure you want to delete?')" href="permanent_delete.php?EventID=<?php echo $eventList['EventID']?>">Delete Permanently</a>
             </td>
           </tr>
           <?php

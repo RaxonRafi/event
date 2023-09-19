@@ -18,7 +18,7 @@ $data=mysqli_query($conn,$event_sql);
 
     <div class="header-content">
         <div class="title">
-             <h1>Event Planner</h1>
+            <a href="index.php"><h1>Event Planner</h1></a>
         </div>
         <div class="navigation">
             <nav>

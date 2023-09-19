@@ -18,8 +18,9 @@ if(isset($_POST['submit'])){
     $eventName = $_POST['eventName'];
     $eventDate = $_POST['eventDate'];
     $eventTime = $_POST['eventTime'];
-    $eventLocation = $_POST['eventLocation'];
-    $description = $_POST['description'];
+    $eventLocation =mysqli_real_escape_string($conn,$_POST['eventLocation']) ;
+    $description = mysqli_real_escape_string($conn,$_POST['description']);
+    
     $eventStatus = $_POST['eventStatus'];
     
     $eventInsert = "INSERT INTO event(EventID,EventName, EventDate, EventTime, EventLocation, EventDescription,EventStatus) VALUES ('$uniqueID','$eventName','$eventDate ','$eventTime','$eventLocation','$description','$eventStatus')";

@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
     $EventID = $_POST['EventID'];
     $ItemName = $_POST['ItemName'];
     $ItemCost = $_POST['ItemCost'];
-    $description = $_POST['description'];
+    $description = mysqli_real_escape_string($conn,$_POST['description']);
     
     $BudgetID = generateUniqueID();
     
