@@ -15,7 +15,9 @@ if(isset($_POST['submit'])){
     $EventID = $_POST['EventID'];
     $TaskAssignedTo = $_POST['TaskAssignedTo'];
     $Taskstatus = $_POST['Taskstatus'];
-    $TaskDescription = $_POST['TaskDescription'];
+    $TaskDescription = mysqli_real_escape_string($conn,$_POST['TaskDescription']);
+
+    
     
     $TaskID = generateUniqueID();
     

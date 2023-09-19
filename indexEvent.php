@@ -1,7 +1,7 @@
 <?php
 require_once "./config/db.php";
 
-$event_sql="SELECT EventName,EventDate,EventDescription FROM event";
+$event_sql="SELECT * FROM event_task_view";
 $data=mysqli_query($conn,$event_sql);
 
 ?>
@@ -33,9 +33,11 @@ $data=mysqli_query($conn,$event_sql);
         <div class="event-list">
             <table>
                 <tr>
+
                     <th>Event Name</th>
-                    <th>Event Date</th>
-                    <th>Event Description</th>
+                    <th>Task Assigned To</th>
+                    <th>Task Description</th>
+                    <th>Task status</th>
                 </tr>
         
                 <?php
@@ -43,8 +45,9 @@ $data=mysqli_query($conn,$event_sql);
                 ?>
                 <tr>
                     <td> <?php echo $item['EventName']  ?> </td>
-                    <td><?php echo $item['EventDate'] ?></td>
-                    <td><?php echo $item['EventDescription'] ?></td>
+                    <td><?php echo $item['TaskAssignedTo'] ?></td>
+                    <td><?php echo $item['TaskDescription'] ?></td>
+                    <td><?php echo $item['TaskStatus'] ?></td>
                 </tr>
                 
                 <?php

@@ -1,12 +1,12 @@
 <?php
 require_once "./config/sidebar.php";
 require_once "./config/db.php";
-$eventListSql ="SELECT * FROM event";
+$eventListSql ="SELECT * FROM backup";
 $eventLists = mysqli_query($conn,$eventListSql);
 
 ?>
     <div id="content">
-      <h1>Event List page!</h1>
+      <h1>Trash</h1>
 
     <?php
      if(isset($_SESSION['message'])){
@@ -24,8 +24,6 @@ $eventLists = mysqli_query($conn,$eventListSql);
         </head>
         <body>
         
-
-          <a style="float: right;" class="global-btn" href="trash.php" type="buttom">Trash</a>
 
         <table>
           <tr>
@@ -48,9 +46,8 @@ $eventLists = mysqli_query($conn,$eventListSql);
             <td><?php echo $eventList['EventDescription'] ?></td>
             <td><?php echo $eventList['EventStatus'] ?></td>
             <td>
-                <a class="global-btn" href="event_details.php?EventID=<?php echo $eventList['EventID']?>">view</a>
-                <a class="global-btn" href="eventEdit.php?EventID=<?php echo $eventList['EventID']?>">Edit</a>
-                <a class="global-btn" onClick ="return confirm('Are you sure you want to delete?')" href="event_delete.php?EventID=<?php echo $eventList['EventID']?>">Delete</a>
+                <a class="global-btn" href="restore.php?EventID=<?php echo $eventList['EventID']?>">Restore</a>
+                <a class="global-btn" onClick ="return confirm('Are you sure you want to delete?')" href="event_delete.php?EventID=<?php echo $eventList['EventID']?>">Delete Permanently</a>
             </td>
           </tr>
           <?php

@@ -1,16 +1,25 @@
 <?php
 $dashboard = true;
+require_once "./config/db.php";
 require_once "./config/sidebar.php";
 if(!isset($_SESSION['email_address'])){
 
   header("location: login.php");
+  // SELECT COUNT(*) AS total_event FROM event;
   
 }
+$total_event_sql="SELECT COUNT(*) AS total_event FROM event";
+$total_event_cnt=mysqli_fetch_assoc(mysqli_query($conn,$total_event_sql));
+
+print_r($total_event_cnt);
 // <?php echo $_SESSION['firstName']." ". $_SESSION['lastName'] ?>
 ?>
   <div id="content">
     <h1>Welcome, Admin </h1>
-    <p>This is where you can manage events, users, and settings for the event planner app.</p>
+    <h2>
+      total events:<?php echo $total_event_cnt['total_event'];?>
+    </h2>
+   
   </div>
 <?php
 require_once "./config/footer.php"

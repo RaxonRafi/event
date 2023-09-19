@@ -172,3 +172,17 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+.table-data{
+
+  text-align: center;
+  
+}
+.table-data table{
+  font-size: 12px;
+}
+.trash-btn{
+  text-decoration: none;
+  background-color: gray;
+  padding: 3px;
+}
