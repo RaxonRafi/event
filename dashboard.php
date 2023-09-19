@@ -5,7 +5,7 @@ require_once "./config/sidebar.php";
 if(!isset($_SESSION['email_address'])){
 
   header("location: login.php");
-  // SELECT COUNT(*) AS total_event FROM event;
+
   
 }
 $total_event_sql="SELECT COUNT(*) AS total_event FROM event";
@@ -22,7 +22,7 @@ $total_user_cnt=mysqli_fetch_assoc(mysqli_query($conn,$total_user_sql));
 
 ?>
   <div id="content">
-    <h1>Welcome, Admin </h1>
+    <h1>Welcome, <?php echo $_SESSION['lastName'] ?> </h1>
 
     <div class="dashboard-items">
       <div class="box">
